@@ -1,6 +1,7 @@
 #include <Player/PlayerController.hpp>
 
 #include <Canis/App.hpp>
+#include <Canis/Debug.hpp>
 #include <Canis/InputManager.hpp>
 #include <Canis/ConfigHelper.hpp>
 
@@ -28,10 +29,12 @@ DEFAULT_UNREGISTER_SCRIPT(playerConf, PlayerController)
 
 void PlayerController::Create() {}
 
-void PlayerController::Ready() {}
+void PlayerController::Ready() {
+    entity.scene.GetWindow().LockMouse(true);
+}
 
 void PlayerController::Destroy() {
-    //entity.scene.GetWindow().
+    entity.scene.GetWindow().LockMouse(false);
 }
 
 void PlayerController::Update(float _dt)
@@ -50,6 +53,17 @@ void PlayerController::Update(float _dt)
     Vector3 inputDirection = Vector3(0.0f);
 
     transform.rotation.y += DEG2RAD * input.mouseRel.x * turnSpeed * _dt;
+
+    if (input.JustReleasedKey(Key::ESCAPE)) {
+        Debug::Log("Escape");
+        entity.scene.GetWindow().LockMouse(!entity.scene.GetWindow().IsMouseLocked());
+    }
+
+    if (entity.scene.GetWindow().IsMouseLocked()) {
+        entity.scene.GetWindow().CenterMouse();
+    } else {
+
+    }
 
     if (input.GetKey(Key::A) || input.GetKey(Key::LEFT))
         inputDirection.x -= 1.0f;

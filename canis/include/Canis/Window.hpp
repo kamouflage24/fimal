@@ -25,6 +25,11 @@ namespace Canis
         int GetWindowWidth() { return m_screenWidth; }
         int GetWindowHeight() { return m_screenHeight; }
 
+        bool IsMouseLocked() { return m_mouseLock; }
+        void LockMouse(bool _lock);
+        void CenterMouse();
+        void SetMousePosition(int _x, int _y);
+
         void Clear() const;
         void SetClearColor(Color _color);
         Color GetClearColor() { return m_clearColor; }
@@ -56,6 +61,8 @@ namespace Canis
         int m_screenHeight = 0;
         int m_renderWidth = 0;
         int m_renderHeight = 0;
+
+        bool m_mouseLock = false;
 
         void InitGL();
     };

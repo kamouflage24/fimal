@@ -77,6 +77,41 @@ namespace Canis
         SDL_Quit();
     }
 
+    void Window::LockMouse(bool _lock)
+    {
+        if (!SDL_GL_MakeCurrent(static_cast<SDL_Window*>(m_window), static_cast<SDL_GLContext>(m_context)))
+        {
+            Debug::Warning("SDL_GL_MakeCurrent failed while setting mouse lock: %s", SDL_GetError());
+            return;
+        }
+
+        m_mouseLock = _lock;
+        SDL_CaptureMouse(m_mouseLock);
+        SDL_SetWindowRelativeMouseMode((SDL_Window*)m_window, m_mouseLock);
+    }
+
+    void Window::CenterMouse()
+    {
+        if (!SDL_GL_MakeCurrent(static_cast<SDL_Window*>(m_window), static_cast<SDL_GLContext>(m_context)))
+        {
+            Debug::Warning("SDL_GL_MakeCurrent failed while setting center mouse: %s", SDL_GetError());
+            return;
+        }
+
+        SetMousePosition(m_renderWidth/2, m_renderHeight/2);
+    }
+
+    void Window::SetMousePosition(int _x, int _y)
+    {
+        if (!SDL_GL_MakeCurrent(static_cast<SDL_Window*>(m_window), static_cast<SDL_GLContext>(m_context)))
+        {
+            Debug::Warning("SDL_GL_MakeCurrent failed while setting set mouse position: %s", SDL_GetError());
+            return;
+        }
+
+        SDL_WarpMouseInWindow((SDL_Window*)m_window, _x, m_renderHeight - _y);
+    }
+
     void Window::Clear() const
     {
         float r = m_clearColor.r;
