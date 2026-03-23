@@ -11,6 +11,7 @@ void RegisterPlayerControllerScript(App& _app)
 {
     REGISTER_PROPERTY(playerConf, PlayerController, walkingSpeed);
     REGISTER_PROPERTY(playerConf, PlayerController, sprintingSpeed);
+    REGISTER_PROPERTY(playerConf, PlayerController, turnSpeed);
     REGISTER_PROPERTY(playerConf, PlayerController, jumpImpulse);
     REGISTER_PROPERTY(playerConf, PlayerController, groundCheckDistance);
     REGISTER_PROPERTY(playerConf, PlayerController, groundCollisionMask);
@@ -29,7 +30,9 @@ void PlayerController::Create() {}
 
 void PlayerController::Ready() {}
 
-void PlayerController::Destroy() {}
+void PlayerController::Destroy() {
+    //entity.scene.GetWindow().
+}
 
 void PlayerController::Update(float _dt)
 {
@@ -45,6 +48,8 @@ void PlayerController::Update(float _dt)
     grounded = entity.scene.Raycast(groundRayOrigin, Vector3(0.0f, -1.0f, 0.0f), groundHit, groundCheckDistance, groundCollisionMask);
 
     Vector3 inputDirection = Vector3(0.0f);
+
+    transform.rotation.y += DEG2RAD * input.mouseRel.x * turnSpeed * _dt;
 
     if (input.GetKey(Key::A) || input.GetKey(Key::LEFT))
         inputDirection.x -= 1.0f;

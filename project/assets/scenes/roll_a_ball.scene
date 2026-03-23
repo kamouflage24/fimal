@@ -8,10 +8,10 @@ Entities:
     Tag: MainCamera
     Canis::Transform:
       active: true
-      position: [0, 8, 10]
-      rotation: [-0.62, 0, 0]
+      position: [0, 1, 0]
+      rotation: [0, 0, 0]
       scale: [1, 1, 1]
-      parent: 0
+      parent: 7544183909755889777
       children:
         []
     Canis::Camera:
@@ -709,7 +709,7 @@ Entities:
       scale: [1, 1, 1]
       parent: 0
       children:
-        []
+        - 910001
     Canis::Rigidbody:
       active: true
       motionType: 2
@@ -742,7 +742,9 @@ Entities:
         path: assets/defaults/models/capsule.glb
         uuid: 17154083321347000103
     PlayerController:
-      moveForce: 1000
+      walkingSpeed: 1000
+      sprintingSpeed: 3000
+      turnSpeed: 100
       jumpImpulse: 7.5
       groundCheckDistance: 2
       groundCollisionMask: 1

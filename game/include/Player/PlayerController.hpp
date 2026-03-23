@@ -11,6 +11,7 @@ public:
 
     float walkingSpeed = 1000.0f;
     float sprintingSpeed = 3000.0f;
+    float turnSpeed = 10.0f;
     float jumpImpulse = 7.5f;
     float groundCheckDistance = 0.75f;
     Canis::Mask groundCollisionMask = Canis::Rigidbody::DefaultLayer;
