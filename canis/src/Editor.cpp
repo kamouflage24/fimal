@@ -2117,32 +2117,153 @@ namespace Canis
 
         Entity &entity = *selectedEntity;
 
-        static int componentToAdd = 0;
-
         if (_refresh)
-            componentToAdd = 0;
+        {
+            m_addComponentSelection = 0;
+            m_addComponentSearch.clear();
+            m_focusAddComponentSearch = false;
+        }
 
         std::vector<const char *> cStringItems = ConvertComponentToCStringVector(*m_app, entity);
+        const bool hasAvailableComponents = !cStringItems.empty();
 
-        if (cStringItems.size() > 0)
+        if (!hasAvailableComponents)
         {
-            componentToAdd = std::clamp(componentToAdd, 0, static_cast<int>(cStringItems.size()) - 1);
-            ImGui::Combo("##Components", &componentToAdd, cStringItems.data(), static_cast<int>(cStringItems.size()));
+            ImGui::BeginDisabled();
+            ImGui::Button("Add Component", ImVec2(-1.0f, 0.0f));
+            ImGui::EndDisabled();
+            return;
+        }
 
-            ImGui::SameLine();
+        if (ImGui::Button("Add Component", ImVec2(-1.0f, 0.0f)))
+        {
+            m_addComponentSelection = 0;
+            m_addComponentSearch.clear();
+            m_focusAddComponentSearch = true;
+            ImGui::OpenPopup("Add Component");
+        }
 
-            if (ImGui::Button("+##AddComponent"))
+        ImGuiViewport *viewport = ImGui::GetMainViewport();
+        if (viewport != nullptr)
+        {
+            const ImVec2 popupCenter = ImVec2(
+                viewport->Pos.x + (viewport->Size.x * 0.5f),
+                viewport->Pos.y + (viewport->Size.y * 0.5f));
+            ImGui::SetNextWindowPos(popupCenter, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+        }
+        ImGui::SetNextWindowSize(ImVec2(420.0f, 0.0f), ImGuiCond_Appearing);
+
+        if (ImGui::BeginPopupModal("Add Component", nullptr, ImGuiWindowFlags_AlwaysAutoResize))
+        {
+            auto addSelectedComponent = [&](const std::vector<int> &_filteredIndices) -> bool
             {
-                for (int i = 0; i < m_app->GetScriptRegistry().size(); i++)
+                if (_filteredIndices.empty())
+                    return false;
+
+                const std::string componentName = cStringItems[_filteredIndices[m_addComponentSelection]];
+                for (ScriptConf &conf : m_app->GetScriptRegistry())
                 {
-                    if (cStringItems[componentToAdd] == m_app->GetScriptRegistry()[i].name)
+                    if (conf.name == componentName)
                     {
-                        m_app->GetScriptRegistry()[i].Add(entity);
-                        componentToAdd = 0;
-                        break;
+                        conf.Add(entity);
+                        ImGui::CloseCurrentPopup();
+                        m_addComponentSelection = 0;
+                        m_addComponentSearch.clear();
+                        return true;
                     }
                 }
+
+                return false;
+            };
+
+            auto cancelAddComponent = [&]() -> void
+            {
+                m_addComponentSelection = 0;
+                m_addComponentSearch.clear();
+                ImGui::CloseCurrentPopup();
+            };
+
+            auto matchesSearch = [&](const char *_value) -> bool
+            {
+                if (m_addComponentSearch.empty())
+                    return true;
+
+                std::string value = _value;
+                std::string search = m_addComponentSearch;
+
+                std::transform(value.begin(), value.end(), value.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+                std::transform(search.begin(), search.end(), search.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+                return value.find(search) != std::string::npos;
+            };
+
+            if (m_focusAddComponentSearch)
+            {
+                ImGui::SetKeyboardFocusHere();
+                m_focusAddComponentSearch = false;
             }
+
+            ImGui::InputTextWithHint("##AddComponentSearch", "Search components...", &m_addComponentSearch);
+            ImGui::Separator();
+
+            std::vector<int> filteredIndices = {};
+            filteredIndices.reserve(cStringItems.size());
+            for (int i = 0; i < static_cast<int>(cStringItems.size()); ++i)
+            {
+                if (matchesSearch(cStringItems[i]))
+                    filteredIndices.push_back(i);
+            }
+
+            if (filteredIndices.empty())
+            {
+                m_addComponentSelection = 0;
+                ImGui::TextDisabled("No components match the current search.");
+            }
+            else
+            {
+                m_addComponentSelection = std::clamp(m_addComponentSelection, 0, static_cast<int>(filteredIndices.size()) - 1);
+
+                ImGui::BeginChild("##AddComponentList", ImVec2(420.0f, 260.0f), true);
+                for (int filteredIndex = 0; filteredIndex < static_cast<int>(filteredIndices.size()); ++filteredIndex)
+                {
+                    const int componentIndex = filteredIndices[filteredIndex];
+                    const bool selected = (filteredIndex == m_addComponentSelection);
+
+                    if (ImGui::Selectable(cStringItems[componentIndex], selected))
+                        m_addComponentSelection = filteredIndex;
+
+                    if (selected)
+                        ImGui::SetItemDefaultFocus();
+
+                    if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left))
+                        addSelectedComponent(filteredIndices);
+                }
+                ImGui::EndChild();
+            }
+
+            if (ImGui::IsKeyPressed(ImGuiKey_Escape))
+            {
+                cancelAddComponent();
+            }
+            else if (ImGui::IsKeyPressed(ImGuiKey_Enter) || ImGui::IsKeyPressed(ImGuiKey_KeypadEnter))
+            {
+                addSelectedComponent(filteredIndices);
+            }
+
+            const bool canAddComponent = !filteredIndices.empty();
+            if (!canAddComponent)
+                ImGui::BeginDisabled();
+
+            if (ImGui::Button("Add", ImVec2(120.0f, 0.0f)))
+                addSelectedComponent(filteredIndices);
+
+            if (!canAddComponent)
+                ImGui::EndDisabled();
+
+            ImGui::SameLine();
+            if (ImGui::Button("Cancel", ImVec2(120.0f, 0.0f)))
+                cancelAddComponent();
+
+            ImGui::EndPopup();
         }
     }
 

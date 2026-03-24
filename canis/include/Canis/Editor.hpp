@@ -201,5 +201,8 @@ namespace Canis
 
         unsigned int m_gameInputWindowID = 0;
         std::unordered_map<std::type_index, InspectorFieldDrawer> m_inspectorFieldDrawers = {};
+        int m_addComponentSelection = 0;
+        std::string m_addComponentSearch = {};
+        bool m_focusAddComponentSearch = false;
     };
 }
