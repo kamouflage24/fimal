@@ -478,7 +478,8 @@ namespace
 
         auto getIndex = [&](int _x, int _y, int _z) -> std::size_t
         {
-            return static_cast<std::size_t>((( _z * _settings.chunkHeight) + _y) * _settings.chunkSize + _x);
+            // Keep the packed block layout in sync with VoxelTerrainChunk::GetIndex().
+            return static_cast<std::size_t>(((_y * _settings.chunkSize) + _z) * _settings.chunkSize + _x);
         };
 
         for (int localZ = 0; localZ < _settings.chunkSize; ++localZ)

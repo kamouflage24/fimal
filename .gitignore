@@ -13,3 +13,5 @@ project/*
 *.zip
 __cmake_systeminformation
 *vgcore.*
+
+.codex
