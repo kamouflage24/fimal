@@ -614,8 +614,8 @@ Entities:
     RollABall::PickupSpinner:
       spinSpeedDegrees: 120
   - Entity: 910106
-    Name: Pickup_06
-    Tag: Pickup
+    Name: Grass
+    Tag: ""
     Canis::Transform:
       active: true
       position: [0, 0.8, 6]
@@ -633,7 +633,7 @@ Entities:
       linearDamping: 0.05
       angularDamping: 0.05
       useGravity: false
-      isSensor: true
+      isSensor: false
       layer: 4
       mask: 4294967295
       allowSleeping: false
@@ -646,15 +646,13 @@ Entities:
       active: true
       size: [1, 1, 1]
     Canis::Material:
-      color: [1, 0.87, 0.22, 1]
+      color: [1, 1, 1, 1]
       MaterialAsset:
-        uuid: 17490362529814420531
+        uuid: 13904854601044475477
     Canis::Model:
-      color: [1, 0.87, 0.22, 1]
+      color: [1, 1, 1, 1]
       ModelAsset:
         uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
   - Entity: 910107
     Name: Pickup_07
     Tag: Pickup
@@ -919,7 +917,7 @@ Entities:
     Canis::RectTransform:
       active: true
       position: [0, 0]
-      size: [50, 33]
+      size: [49.999996, 33]
       scale: [1, 1]
       anchorMin: [0.5, 0.5]
       anchorMax: [0.5, 0.5]
