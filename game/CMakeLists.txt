@@ -5,6 +5,7 @@ set(GENERATED_REGISTER_SCRIPTS_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/Regis
 set(GENERATE_REGISTER_SCRIPTS_SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/cmake/GenerateRegisterScripts.cmake")
 
 file(GLOB_RECURSE REGISTER_SCRIPT_HEADERS
+    CONFIGURE_DEPENDS
     RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/include"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp"
@@ -34,8 +35,8 @@ add_custom_command(
 
 add_custom_target(GenerateRegisterScripts DEPENDS "${GENERATED_REGISTER_SCRIPTS_HEADER}")
 
-file(GLOB_RECURSE GAME_SOURCES src/*.c*)
-file(GLOB_RECURSE GAME_HEADERS include/*.h*)
+file(GLOB_RECURSE GAME_SOURCES CONFIGURE_DEPENDS src/*.c*)
+file(GLOB_RECURSE GAME_HEADERS CONFIGURE_DEPENDS include/*.h*)
 list(REMOVE_ITEM GAME_HEADERS "${GENERATED_REGISTER_SCRIPTS_HEADER}")
 
 message(STATUS "GAME_INCLUDE_DIRS ${GAME_HEADERS}")
@@ -79,15 +80,8 @@ set_target_properties(GameCode PROPERTIES
 )
 
 if(NOT CANIS_PLATFORM_WEB)
-    if (WIN32)
-        add_custom_command(TARGET GameCode POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy_directory
-                ${CMAKE_SOURCE_DIR}/${PROJECT_SETTINGS_DIR_NAME}/
-                ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_SETTINGS_DIR_NAME})
-    else()
-        add_custom_command(TARGET GameCode PRE_BUILD
-            COMMAND ${CMAKE_COMMAND} -E create_symlink
-                ${CMAKE_SOURCE_DIR}/${PROJECT_SETTINGS_DIR_NAME}/
-                ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_SETTINGS_DIR_NAME})
-    endif()
+    add_custom_command(TARGET GameCode POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/${PROJECT_SETTINGS_DIR_NAME}/
+            ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_SETTINGS_DIR_NAME})
 endif()
