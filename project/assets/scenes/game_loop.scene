@@ -10,15 +10,15 @@ Entities:
     Tag: MainCamera
     Canis::Transform:
       active: true
-      position: [0, 8, 10]
-      rotation: [-0.62, 0, 0]
+      position: [10, 8, 0]
+      rotation: [-0.6199931, 1.5707964, 0]
       scale: [1, 1, 1]
       parent: 0
       children:
         []
     Canis::Camera:
       primary: true
-      fovDegrees: 60
+      fovDegrees: 90
       nearClip: 0.1
       farClip: 300
   - Entity: 910002
@@ -27,8 +27,8 @@ Entities:
     Canis::DirectionalLight:
       enabled: true
       color: [0.99019605, 0.99019605, 0.99019605, 1]
-      intensity: 5
-      direction: [-0.35, -1, -0.2]
+      intensity: 45
+      direction: [0.35, -0.5, -0.2]
   - Entity: 910010
     Name: Ground
     Tag: ""
@@ -64,12 +64,52 @@ Entities:
     Canis::Material:
       color: [0.32, 0.38, 0.46, 1]
       MaterialAsset:
-        uuid: 17490362529814420531
+        uuid: 4172645230642714947
     Canis::Model:
       color: [0.32, 0.38, 0.46, 1]
       ModelAsset:
         uuid: 17154083321347000101
   - Entity: 910011
+    Name: Wall_East
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [12.610295, 1, -0.42199445]
+      rotation: [-3.0489964, 1.5609835, -3.0302672]
+      scale: [23.999275, 1.9997537, 0.9998813]
+      parent: 16495376888019668401
+      children:
+        []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.7
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
+    Canis::Material:
+      color: [0.23013966, 0.7181467, 0.2489816, 1]
+      MaterialAsset:
+        uuid: 4172645230642714947
+    Canis::Model:
+      color: [0.2, 0.22, 0.28, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 667249930551937881
     Name: Wall_North
     Tag: ""
     Canis::Transform:
@@ -102,20 +142,20 @@ Entities:
       active: true
       size: [1, 1, 1]
     Canis::Material:
-      color: [0.2, 0.22, 0.28, 1]
+      color: [0.23013966, 0.7181467, 0.2489816, 1]
       MaterialAsset:
-        uuid: 17490362529814420531
+        uuid: 4172645230642714947
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
         uuid: 17154083321347000101
-  - Entity: 910012
-    Name: Wall_South
+  - Entity: 7823734681575346639
+    Name: Wall_North
     Tag: ""
     Canis::Transform:
       active: true
-      position: [0, 1, 12]
-      rotation: [0, 0, 0]
+      position: [0, 1, 7.5198774]
+      rotation: [0, -0, 0]
       scale: [24, 2, 1]
       parent: 16495376888019668401
       children:
@@ -142,21 +182,21 @@ Entities:
       active: true
       size: [1, 1, 1]
     Canis::Material:
-      color: [0.2, 0.22, 0.28, 1]
+      color: [0.23013966, 0.7181467, 0.2489816, 1]
       MaterialAsset:
-        uuid: 17490362529814420531
+        uuid: 4172645230642714947
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
         uuid: 17154083321347000101
-  - Entity: 910013
+  - Entity: 3266038569172496808
     Name: Wall_West
     Tag: ""
     Canis::Transform:
       active: true
-      position: [-12, 1, 0]
-      rotation: [0, 0, 0]
-      scale: [1, 2, 24]
+      position: [-12.343072, 1.0291568, -0.42199445]
+      rotation: [-3.0489964, 1.5609835, -3.0302672]
+      scale: [23.999275, 1.9997537, 0.99986637]
       parent: 16495376888019668401
       children:
         []
@@ -182,49 +222,9 @@ Entities:
       active: true
       size: [1, 1, 1]
     Canis::Material:
-      color: [0.2, 0.22, 0.28, 1]
+      color: [0.23013966, 0.7181467, 0.2489816, 1]
       MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [0.2, 0.22, 0.28, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-  - Entity: 910014
-    Name: Wall_East
-    Tag: ""
-    Canis::Transform:
-      active: true
-      position: [12, 1, 0]
-      rotation: [0, 0, 0]
-      scale: [1, 2, 24]
-      parent: 16495376888019668401
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.7
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: true
-      isSensor: false
-      layer: 1
-      mask: 4294967295
-      allowSleeping: true
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [0.2, 0.22, 0.28, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
+        uuid: 4172645230642714947
     Canis::Model:
       color: [0.2, 0.22, 0.28, 1]
       ModelAsset:
@@ -234,8 +234,8 @@ Entities:
     Tag: Player
     Canis::Transform:
       active: true
-      position: [0, 1, 0]
-      rotation: [0, 0, 0]
+      position: [-2.4368641, 1.6151152, -0.13085999]
+      rotation: [0, -0, 0]
       scale: [1, 1, 1]
       parent: 0
       children:
@@ -282,661 +282,132 @@ Entities:
       pickupRadius: 1.15
       logProgress: true
       sprint: false
-  - Entity: 910030
-    Name: LaserPool
-    Tag: ""
-    SuperPupUtilities::SimpleObjectPool:
-      logWarnings: true
-      pools:
-        - code: laser_bullet
-          prefab: 11264011979323327841
-          size: 6
-  - Entity: 910031
-    Name: LaserTagTurret
-    Tag: Hazard
-    Canis::Transform:
-      active: true
-      position: [0, 0.75, -9.5]
-      rotation: [0, 3.1415927, 0]
-      scale: [1, 1.4, 1]
-      parent: 0
-      children:
-        - 910032
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.7
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: false
-      layer: 1
-      mask: 4294967295
-      allowSleeping: true
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [0.82, 0.19, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [0.82, 0.19, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::LaserTagTurret:
-      laserPrefab: 11264011979323327841
-      targetTag: Player
-      poolCode: laser_bullet
-      fireInterval: 1.75
-      turnSpeedDegrees: 120
-      fireAngleThresholdDegrees: 10
-      muzzleOffset: [0, 0.08, 1.25]
-      projectileSpeed: 14
-      projectileLifeTime: 4
-      projectileHitImpulse: 6
-  - Entity: 910032
-    Name: LaserTagTurret_Barrel
+  - Entity: 11579248057555649366
+    Name: Flower
     Tag: ""
     Canis::Transform:
       active: true
-      position: [0, 0.05, -0.9]
-      rotation: [0, 0, 0]
-      scale: [0.35, 0.2, 1.4]
-      parent: 910031
+      position: [1.9414754, 2.6536498, -5.7550335]
+      rotation: [1.6286387, -0.07633018, -2.202902]
+      scale: [0.99998045, 0.99999344, 0.9999924]
+      parent: 7368392336145021208
       children:
         []
     Canis::Material:
-      color: [0.97, 0.77, 0.32, 1]
+      color: [0.5868726, 0.1812734, 0.1812734, 1]
       MaterialAsset:
         uuid: 17490362529814420531
-    Canis::Model:
-      color: [0.97, 0.77, 0.32, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-  - Entity: 910100
-    Name: Pickup_00
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [-6, 0.8, -6]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 910101
-    Name: Pickup_01
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [0, 0.8, -6]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 910102
-    Name: Pickup_02
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [6, 0.8, -6]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 910103
-    Name: Pickup_03
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [-6, 0.8, 0]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 910104
-    Name: Pickup_04
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [6, 0.8, 0]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 910105
-    Name: Pickup_05
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [-6, 0.8, 6]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 910106
-    Name: Grass
-    Tag: ""
-    Canis::Transform:
-      active: true
-      position: [0, 0.8, 6]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 0
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: false
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 1, 1, 1]
-      MaterialAsset:
-        uuid: 13904854601044475477
+      MaterialSlots:
+        - uuid: 4172645230642714947
     Canis::Model:
       color: [1, 1, 1, 1]
       ModelAsset:
-        uuid: 17154083321347000101
-  - Entity: 910107
-    Name: Pickup_06
-    Tag: Pickup
-    Canis::Transform:
-      active: true
-      position: [6, 0.8, 6]
-      rotation: [0, 0, 0]
-      scale: [0.7, 0.7, 0.7]
-      parent: 8887981279634208433
-      children:
-        []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 4
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
-    Canis::Material:
-      color: [1, 0.87, 0.22, 1]
-      MaterialAsset:
-        uuid: 17490362529814420531
-    Canis::Model:
-      color: [1, 0.87, 0.22, 1]
-      ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::PickupSpinner:
-      spinSpeedDegrees: 120
-  - Entity: 7448487586354055887
-    Name: BoostPad
+        uuid: 6473578462729814710
+  - Entity: 13078121508357525622
+    Name: Flower
     Tag: ""
     Canis::Transform:
       active: true
-      position: [-2.954834, 0, 0]
-      rotation: [0, -0, 0]
+      position: [-3.0351653, 2.6536498, -5.760449]
+      rotation: [1.6286387, -0.07633018, -2.202902]
+      scale: [0.99998045, 0.99999344, 0.9999924]
+      parent: 3819695661204309988
+      children:
+        []
+    Canis::Material:
+      color: [0.51286805, 0.16523308, 0.6293436, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+      MaterialSlots:
+        - uuid: 4172645230642714947
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 6473578462729814710
+  - Entity: 665386402207238319
+    Name: Flower
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [1.7616482, 2.6536498, -5.685502]
+      rotation: [1.6286387, -0.07633018, -2.202902]
+      scale: [0.99998045, 0.99999344, 0.9999924]
+      parent: 3819695661204309988
+      children:
+        []
+    Canis::Material:
+      color: [0.51286805, 0.16523308, 0.6293436, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+      MaterialSlots:
+        - uuid: 4172645230642714947
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 6473578462729814710
+  - Entity: 9876800986668481982
+    Name: Flower
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-3.1347275, 2.6536498, -5.673058]
+      rotation: [1.6286387, -0.07633018, -2.202902]
+      scale: [0.99998045, 0.99999344, 0.9999924]
+      parent: 7368392336145021208
+      children:
+        []
+    Canis::Material:
+      color: [0.5868726, 0.1812734, 0.1812734, 1]
+      MaterialAsset:
+        uuid: 17490362529814420531
+      MaterialSlots:
+        - uuid: 4172645230642714947
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 6473578462729814710
+  - Entity: 2505067013772853531
+    Name: Fire
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-1.0486097, 0, -9.790051]
+      rotation: [0, 0, 0]
       scale: [1, 1, 1]
-      parent: 0
+      parent: 7368392336145021208
       children:
         []
-    Canis::Rigidbody:
-      active: true
-      motionType: 0
-      mass: 1
-      friction: 0.2
-      restitution: 0
-      linearDamping: 0.05
-      angularDamping: 0.05
-      useGravity: false
-      isSensor: true
-      layer: 8
-      mask: 4294967295
-      allowSleeping: false
-      lockRotationX: false
-      lockRotationY: false
-      lockRotationZ: false
-      linearVelocity: [0, 0, 0]
-      angularVelocity: [0, 0, 0]
-    Canis::BoxCollider:
-      active: true
-      size: [1, 1, 1]
     Canis::Material:
-      color: [0.3316457, 0.64705884, 0.18079588, 1]
+      color: [1, 1, 1, 1]
       MaterialAsset:
         uuid: 17490362529814420531
+      MaterialSlots:
+        - ~
     Canis::Model:
       color: [1, 1, 1, 1]
       ModelAsset:
-        uuid: 17154083321347000101
-    RollABall::BoostPad:
-      yeetForce: 10
-      player: 910020
-      ground: 910010
-  - Entity: 15184857591600661882
-    Name: HUD
+        uuid: 14816117620444291383
+  - Entity: 15919712548670702926
+    Name: Fire
     Tag: ""
-    Canis::Canvas:
+    Canis::Transform:
       active: true
-      renderMode: 0
-      scaleMode: 1
-      screenSize: [1280, 800]
-    Canis::RectTransform:
-      active: true
-      position: [0, 0]
-      size: [0, 0]
-      scale: [1, 1]
-      anchorMin: [0, 0]
-      anchorMax: [1, 1]
-      pivot: [0.5, 0.5]
-      originOffset: [0, 0]
-      depth: 0.001
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 0
-      children:
-        - 513738397781658186
-    RollABall::PauseMenuController:
-      pauseMenu: 513738397781658186
-  - Entity: 513738397781658186
-    Name: PauseMenu
-    Tag: ""
-    Canis::RectTransform:
-      active: true
-      position: [0, 0]
-      size: [300, 300]
-      scale: [1, 1]
-      anchorMin: [0.5, 0.5]
-      anchorMax: [0.5, 0.5]
-      pivot: [0.5, 0.5]
-      originOffset: [0, 0]
-      depth: 0.001
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 15184857591600661882
-      children:
-        - 16139851625670579374
-        - 5619532064968242118
-        - 9023982696254970992
-    Canis::Sprite2D:
-      color: [0.26666668, 0.26666668, 0.26666668, 0.78039217]
-      uv: [0, 0, 1, 1]
-      flipX: false
-      flipY: false
-      TextureAsset:
-        uuid: 16060716090729117806
-  - Entity: 16139851625670579374
-    Name: Title
-    Tag: ""
-    Canis::RectTransform:
-      active: true
-      position: [0, -20]
-      size: [150, 33]
-      scale: [1, 1]
-      anchorMin: [0.5, 1]
-      anchorMax: [0.5, 1]
-      pivot: [0.5, 1]
-      originOffset: [0, 0]
-      depth: 0.001
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 513738397781658186
+      position: [1.3276081, 7.1525574e-07, -9.790051]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3819695661204309988
       children:
         []
-    Canis::Text:
-      text: Pause Menu
+    Canis::Material:
       color: [1, 1, 1, 1]
-      alignment: 2
-      horizontalBoundary: 0
-      FontAsset:
-        uuid: 14618725492368012463
-        fontSize: 32
-  - Entity: 5619532064968242118
-    Name: Resume
-    Tag: ""
-    Canis::RectTransform:
-      active: true
-      position: [0, 0]
-      size: [160, 48]
-      scale: [1, 1]
-      anchorMin: [0.5, 0.5]
-      anchorMax: [0.5, 0.5]
-      pivot: [0.5, 0.5]
-      originOffset: [0, 0]
-      depth: 0.001
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 513738397781658186
-      children:
-        - 7766606862118154735
-    Canis::Sprite2D:
-      color: [0.14, 0.18, 0.24, 0.98]
-      uv: [0, 0, 1, 1]
-      flipX: false
-      flipY: false
-      TextureAsset:
-        uuid: 16060716090729117806
-    Canis::UIButton:
-      active: true
-      targetEntity: 15184857591600661882
-      targetScript: RollABall::PauseMenuController
-      actionName: resume
-      hoverColor: [0.19, 0.25, 0.34, 1]
-      pressedColor: [0.1, 0.14, 0.18, 1]
-      hoverScale: 1.03
-      pressedScale: 0.98
-  - Entity: 7766606862118154735
-    Name: Button Label
-    Tag: ""
-    Canis::RectTransform:
-      active: true
-      position: [0, 0]
-      size: [99, 33]
-      scale: [1, 1]
-      anchorMin: [0.5, 0.5]
-      anchorMax: [0.5, 0.5]
-      pivot: [0.5, 0.5]
-      originOffset: [0, 0]
-      depth: 0.00090000004
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 5619532064968242118
-      children:
-        []
-    Canis::Text:
-      text: Resume
+      MaterialAsset:
+        uuid: 17490362529814420531
+      MaterialSlots:
+        - ~
+    Canis::Model:
       color: [1, 1, 1, 1]
-      alignment: 2
-      horizontalBoundary: 0
-      FontAsset:
-        uuid: 14618725492368012463
-        fontSize: 32
-  - Entity: 9023982696254970992
-    Name: Quit
-    Tag: ""
-    Canis::RectTransform:
-      active: true
-      position: [0, -60]
-      size: [160, 48]
-      scale: [1, 1]
-      anchorMin: [0.5, 0.5]
-      anchorMax: [0.5, 0.5]
-      pivot: [0.5, 0.5]
-      originOffset: [0, 0]
-      depth: 0.001
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 513738397781658186
-      children:
-        - 6160159066433283229
-    Canis::Sprite2D:
-      color: [0.14, 0.18, 0.24, 0.98]
-      uv: [0, 0, 1, 1]
-      flipX: false
-      flipY: false
-      TextureAsset:
-        uuid: 16060716090729117806
-    Canis::UIButton:
-      active: true
-      targetEntity: 15184857591600661882
-      targetScript: RollABall::PauseMenuController
-      actionName: quit
-      hoverColor: [0.19, 0.25, 0.34, 1]
-      pressedColor: [0.1, 0.14, 0.18, 1]
-      hoverScale: 1.03
-      pressedScale: 0.98
-  - Entity: 6160159066433283229
-    Name: Button Label 2
-    Tag: ""
-    Canis::RectTransform:
-      active: true
-      position: [0, 0]
-      size: [50, 33]
-      scale: [1, 1]
-      anchorMin: [0.5, 0.5]
-      anchorMax: [0.5, 0.5]
-      pivot: [0.5, 0.5]
-      originOffset: [0, 0]
-      depth: 0.00090000004
-      rotation: 0
-      rotationOriginOffset: [0, 0]
-      parent: 9023982696254970992
-      children:
-        []
-    Canis::Text:
-      text: Quit
-      color: [1, 1, 1, 1]
-      alignment: 2
-      horizontalBoundary: 0
-      FontAsset:
-        uuid: 14618725492368012463
-        fontSize: 32
+      ModelAsset:
+        uuid: 14816117620444291383
   - Entity: 16495376888019668401
     Name: Platform
     Tag: ""
@@ -949,23 +420,6308 @@ Entities:
       children:
         - 910010
         - 910011
-        - 910012
-        - 910013
-        - 910014
-  - Entity: 8887981279634208433
-    Name: Pickups
+        - 667249930551937881
+        - 7823734681575346639
+        - 3266038569172496808
+  - Entity: 3819695661204309988
+    Name: House
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [8.626313, 0, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 0
+      children:
+        - 15456975734335798620
+        - 9936698928092995212
+        - 11209529114066282812
+        - 11981587581176307352
+        - 2919532703479771172
+        - 14010169244971543873
+        - 13078121508357525622
+        - 665386402207238319
+        - 15919712548670702926
+  - Entity: 15456975734335798620
+    Name: Level
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 2.0043025, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 3819695661204309988
+      children:
+        - 93626884662371455
+        - 4649158421513865069
+        - 18328346490337771220
+        - 14424755533188277925
+  - Entity: 93626884662371455
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-1.1832085, -0.054595947, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 15456975734335798620
+      children:
+        - 7075602960943178965
+        - 4630033182790816761
+  - Entity: 7075602960943178965
+    Name: Wall
     Tag: ""
     Canis::Transform:
       active: true
       position: [0, 0, 0]
       rotation: [0, 0, 0]
       scale: [1, 1, 1]
+      parent: 93626884662371455
+      children:
+        - 17565484620338679239
+        - 17378068908633029282
+        - 12782010625040346528
+        - 2032084913949399894
+        - 8421023301654664376
+        - 1080548061777977467
+  - Entity: 17565484620338679239
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7075602960943178965
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17378068908633029282
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7075602960943178965
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12782010625040346528
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7075602960943178965
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2032084913949399894
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7075602960943178965
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8421023301654664376
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7075602960943178965
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1080548061777977467
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7075602960943178965
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4630033182790816761
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 93626884662371455
+      children:
+        - 16949076493353677881
+        - 652311071004054715
+        - 15227242726082112705
+        - 8509252074877215460
+        - 9787421291279331889
+        - 737478474695227987
+  - Entity: 16949076493353677881
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4630033182790816761
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 652311071004054715
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4630033182790816761
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15227242726082112705
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4630033182790816761
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8509252074877215460
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4630033182790816761
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9787421291279331889
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4630033182790816761
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 737478474695227987
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4630033182790816761
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4649158421513865069
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.073425, -0.05620098, -14.845206]
+      rotation: [3.1415863, -1.5707954, 3.141584]
+      scale: [0.99998945, 0.99999994, 0.99998945]
+      parent: 15456975734335798620
+      children:
+        - 13001556671862209537
+        - 2532036532627079484
+  - Entity: 13001556671862209537
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4649158421513865069
+      children:
+        - 9594460000900987045
+        - 9726574108797126371
+        - 14456698034069457192
+        - 11630648649556458704
+        - 3195205107804792071
+        - 7880389713909929216
+  - Entity: 9594460000900987045
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13001556671862209537
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9726574108797126371
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13001556671862209537
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14456698034069457192
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13001556671862209537
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11630648649556458704
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13001556671862209537
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3195205107804792071
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13001556671862209537
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7880389713909929216
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13001556671862209537
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2532036532627079484
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4649158421513865069
+      children:
+        - 13190156645988877604
+        - 18016268856967065142
+        - 7413545016626736439
+        - 9902813675144716391
+        - 46044382425661546
+        - 1668921829863075524
+  - Entity: 13190156645988877604
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2532036532627079484
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18016268856967065142
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579148, 0.5892838, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1.000097, 1, 1]
+      parent: 2532036532627079484
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7413545016626736439
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2532036532627079484
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9902813675144716391
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2532036532627079484
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 46044382425661546
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2532036532627079484
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1668921829863075524
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2532036532627079484
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18328346490337771220
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-7.9671736, -0.05993247, -0.075712204]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 15456975734335798620
+      children:
+        - 3475830862841125728
+        - 5869047755411303841
+  - Entity: 3475830862841125728
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18328346490337771220
+      children:
+        - 10228463074993989606
+        - 11232633971807695881
+        - 8781210282178132854
+        - 954090442034432146
+        - 17440483881338527630
+        - 16284183121171606800
+  - Entity: 10228463074993989606
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3475830862841125728
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11232633971807695881
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3475830862841125728
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8781210282178132854
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3475830862841125728
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 954090442034432146
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3475830862841125728
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17440483881338527630
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3475830862841125728
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16284183121171606800
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3475830862841125728
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5869047755411303841
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18328346490337771220
+      children:
+        - 17014885376881198709
+        - 10003768194590969453
+        - 10013715050030070105
+        - 15948863575918504154
+        - 5478347580914353489
+        - 18039635227671211557
+  - Entity: 17014885376881198709
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5869047755411303841
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10003768194590969453
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5869047755411303841
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10013715050030070105
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5869047755411303841
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15948863575918504154
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5869047755411303841
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5478347580914353489
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5869047755411303841
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18039635227671211557
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5869047755411303841
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14424755533188277925
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.149916, -0.05639732, -10.126207]
+      rotation: [-3.1415908, -1.5707954, -3.1415908]
+      scale: [1, 0.99999994, 1]
+      parent: 15456975734335798620
+      children:
+        - 10236371101540825831
+        - 7850111027902301570
+  - Entity: 10236371101540825831
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14424755533188277925
+      children:
+        - 3840117564708453540
+        - 9384389174805455559
+        - 11487461445878212877
+        - 7871205269518999609
+  - Entity: 3840117564708453540
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10236371101540825831
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9384389174805455559
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10236371101540825831
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11487461445878212877
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10236371101540825831
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7871205269518999609
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10236371101540825831
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7850111027902301570
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14424755533188277925
+      children:
+        - 15049413802623915184
+        - 512927975755112857
+        - 9271501565847307281
+        - 4073048780699737728
+  - Entity: 15049413802623915184
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7850111027902301570
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 512927975755112857
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7850111027902301570
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9271501565847307281
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7850111027902301570
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4073048780699737728
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7850111027902301570
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9936698928092995212
+    Name: level
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3819695661204309988
+      children:
+        - 712329288108189367
+        - 4260158814349835901
+        - 6182549064757462322
+        - 10080964592514902455
+  - Entity: 712329288108189367
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-1.1832085, -0.054595947, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 9936698928092995212
+      children:
+        - 10971988165147476760
+        - 55734202069229976
+  - Entity: 10971988165147476760
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 712329288108189367
+      children:
+        - 7335250646467042722
+        - 4973098086891523117
+        - 9310505558958405442
+        - 3244443273169604341
+        - 7323624443940271943
+        - 16575053717972277252
+  - Entity: 7335250646467042722
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10971988165147476760
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4973098086891523117
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10971988165147476760
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9310505558958405442
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10971988165147476760
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3244443273169604341
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10971988165147476760
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7323624443940271943
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10971988165147476760
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16575053717972277252
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10971988165147476760
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 55734202069229976
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 712329288108189367
+      children:
+        - 3193267261478560612
+        - 171375242108159675
+        - 9686284060657596253
+        - 4905146790342534543
+        - 4862931400686071258
+        - 6849579755949556145
+  - Entity: 3193267261478560612
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 55734202069229976
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 171375242108159675
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 55734202069229976
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9686284060657596253
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 55734202069229976
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4905146790342534543
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 55734202069229976
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4862931400686071258
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 55734202069229976
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6849579755949556145
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 55734202069229976
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4260158814349835901
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.073425, -0.05620098, -14.845206]
+      rotation: [3.1415863, -1.5707954, 3.141584]
+      scale: [0.99998945, 0.99999994, 0.99998945]
+      parent: 9936698928092995212
+      children:
+        - 17606485835126665508
+        - 3552186714012965241
+  - Entity: 17606485835126665508
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4260158814349835901
+      children:
+        - 10834941232109451998
+        - 7572915445938037234
+        - 13013959506298559222
+        - 16108207778062307429
+        - 9117558828735896696
+        - 12378502796513273294
+  - Entity: 10834941232109451998
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17606485835126665508
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7572915445938037234
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17606485835126665508
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13013959506298559222
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17606485835126665508
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16108207778062307429
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17606485835126665508
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9117558828735896696
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17606485835126665508
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12378502796513273294
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17606485835126665508
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3552186714012965241
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4260158814349835901
+      children:
+        - 3645011319297607292
+        - 10209537294710126521
+        - 9227745355965896779
+        - 4382422402479059463
+        - 10171582141385849981
+        - 14694564987815622781
+  - Entity: 3645011319297607292
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3552186714012965241
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10209537294710126521
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579148, 0.5892838, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1.000097, 1, 1]
+      parent: 3552186714012965241
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9227745355965896779
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3552186714012965241
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4382422402479059463
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3552186714012965241
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10171582141385849981
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3552186714012965241
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14694564987815622781
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3552186714012965241
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6182549064757462322
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-7.9671736, -0.05993247, -0.075712204]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 9936698928092995212
+      children:
+        - 18398153272916152199
+        - 16417308577185659563
+  - Entity: 18398153272916152199
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6182549064757462322
+      children:
+        - 17252235330177440385
+        - 9456039345628960577
+        - 15822633052598456842
+        - 12873062524522834271
+        - 14721119359243867224
+        - 1509322118820393024
+  - Entity: 17252235330177440385
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18398153272916152199
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9456039345628960577
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18398153272916152199
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15822633052598456842
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18398153272916152199
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12873062524522834271
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18398153272916152199
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14721119359243867224
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18398153272916152199
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1509322118820393024
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 18398153272916152199
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16417308577185659563
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6182549064757462322
+      children:
+        - 11586330349486520616
+        - 15268598924317870636
+        - 998065715749228467
+        - 11300915496291969520
+        - 5952151618798756475
+        - 4798511234254183758
+  - Entity: 11586330349486520616
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16417308577185659563
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15268598924317870636
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16417308577185659563
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 998065715749228467
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16417308577185659563
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11300915496291969520
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16417308577185659563
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5952151618798756475
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16417308577185659563
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4798511234254183758
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16417308577185659563
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10080964592514902455
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.149916, -0.05639732, -10.126207]
+      rotation: [-3.1415908, -1.5707954, -3.1415908]
+      scale: [1, 0.99999994, 1]
+      parent: 9936698928092995212
+      children:
+        - 14116858874307096556
+        - 4818315209621732321
+  - Entity: 14116858874307096556
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10080964592514902455
+      children:
+        - 15950592751926534178
+        - 317901681148684836
+        - 3966262454486373790
+        - 2181628390127932510
+  - Entity: 15950592751926534178
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14116858874307096556
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 317901681148684836
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14116858874307096556
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3966262454486373790
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14116858874307096556
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2181628390127932510
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14116858874307096556
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4818315209621732321
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10080964592514902455
+      children:
+        - 6260507663221849805
+        - 701361185836791226
+        - 15606294599774350985
+        - 17297192090260887047
+  - Entity: 6260507663221849805
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4818315209621732321
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 701361185836791226
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4818315209621732321
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15606294599774350985
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4818315209621732321
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17297192090260887047
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4818315209621732321
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11209529114066282812
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-2.3724613, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.99994916]
+      parent: 3819695661204309988
+      children:
+        - 13639874484272309255
+        - 10820328075804876919
+  - Entity: 13639874484272309255
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11209529114066282812
+      children:
+        - 4312102807336105377
+        - 5745710171955885463
+        - 17482233605537053521
+        - 16706116196120621178
+        - 17886535270514933205
+        - 16526892122466452499
+  - Entity: 4312102807336105377
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13639874484272309255
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5745710171955885463
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13639874484272309255
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17482233605537053521
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13639874484272309255
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16706116196120621178
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13639874484272309255
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17886535270514933205
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13639874484272309255
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16526892122466452499
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13639874484272309255
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10820328075804876919
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 11209529114066282812
+      children:
+        - 14051649096547030761
+        - 15491230645112810685
+        - 13861553596358537477
+        - 6818212876565175218
+        - 9377058259936576098
+        - 9684578557242017469
+  - Entity: 14051649096547030761
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10820328075804876919
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15491230645112810685
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10820328075804876919
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13861553596358537477
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10820328075804876919
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6818212876565175218
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10820328075804876919
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9377058259936576098
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10820328075804876919
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9684578557242017469
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10820328075804876919
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11981587581176307352
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [1.7305968, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.9999107]
+      parent: 3819695661204309988
+      children:
+        - 1708885578429520934
+        - 11472761257023959940
+  - Entity: 1708885578429520934
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11981587581176307352
+      children:
+        - 15197317865454825216
+        - 13143444415462031070
+        - 1821107873585421746
+        - 11337834505636716649
+        - 1235548061394567481
+        - 16536145882362970724
+  - Entity: 15197317865454825216
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1708885578429520934
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13143444415462031070
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1708885578429520934
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1821107873585421746
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1708885578429520934
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11337834505636716649
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1708885578429520934
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1235548061394567481
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1708885578429520934
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16536145882362970724
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1708885578429520934
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11472761257023959940
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 11981587581176307352
+      children:
+        - 15241968546077306434
+        - 9152260431643747576
+        - 6551701643643816218
+        - 5578201403688426874
+        - 6384048264715985095
+        - 2567859532757432193
+  - Entity: 15241968546077306434
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11472761257023959940
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9152260431643747576
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11472761257023959940
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6551701643643816218
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11472761257023959940
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5578201403688426874
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11472761257023959940
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6384048264715985095
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11472761257023959940
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2567859532757432193
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11472761257023959940
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2919532703479771172
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-0.33268154, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.9999337]
+      parent: 3819695661204309988
+      children:
+        - 8968753600164295303
+        - 1224478467839896671
+  - Entity: 8968753600164295303
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2919532703479771172
+      children:
+        - 18261615033609040869
+        - 7926057684622640208
+        - 10953181169951549427
+        - 8694264557156053159
+        - 3035939809732644867
+        - 9133708150699842545
+  - Entity: 18261615033609040869
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8968753600164295303
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7926057684622640208
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8968753600164295303
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10953181169951549427
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8968753600164295303
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8694264557156053159
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8968753600164295303
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3035939809732644867
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8968753600164295303
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9133708150699842545
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8968753600164295303
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1224478467839896671
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 2919532703479771172
+      children:
+        - 4124257300671769416
+        - 9762919730121105186
+        - 7496780754122013297
+        - 12563544500238699097
+        - 4845403377505550564
+        - 2842073112376230535
+  - Entity: 4124257300671769416
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1224478467839896671
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9762919730121105186
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1224478467839896671
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7496780754122013297
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1224478467839896671
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12563544500238699097
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1224478467839896671
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4845403377505550564
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1224478467839896671
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2842073112376230535
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1224478467839896671
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14010169244971543873
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.757681, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.9999167]
+      parent: 3819695661204309988
+      children:
+        - 13915610918763636970
+        - 3295526843840484238
+  - Entity: 13915610918763636970
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14010169244971543873
+      children:
+        - 17293985490888215620
+        - 14061535786707255975
+        - 9477921359319075959
+        - 17409272104785695748
+        - 995143610653647460
+        - 18100381753822762859
+  - Entity: 17293985490888215620
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13915610918763636970
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14061535786707255975
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13915610918763636970
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9477921359319075959
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13915610918763636970
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17409272104785695748
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13915610918763636970
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 995143610653647460
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13915610918763636970
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18100381753822762859
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13915610918763636970
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3295526843840484238
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 14010169244971543873
+      children:
+        - 10373508577960637538
+        - 8137449949858780372
+        - 6682512150530809058
+        - 16070583734652216689
+        - 7603462067313027999
+        - 10318515892349801284
+  - Entity: 10373508577960637538
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3295526843840484238
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8137449949858780372
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3295526843840484238
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6682512150530809058
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3295526843840484238
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16070583734652216689
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3295526843840484238
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7603462067313027999
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3295526843840484238
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10318515892349801284
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 3295526843840484238
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7368392336145021208
+    Name: House
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-3.119843, 0, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
       parent: 0
       children:
-        - 910100
-        - 910101
-        - 910102
-        - 910103
-        - 910104
-        - 910105
-        - 910107
+        - 5829957271562267458
+        - 13086958854495926243
+        - 5916353497766337506
+        - 15421867810648696182
+        - 14515090548652237114
+        - 4478589805576152214
+        - 11579248057555649366
+        - 9876800986668481982
+        - 2505067013772853531
+  - Entity: 5829957271562267458
+    Name: Level
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 2.0043025, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 7368392336145021208
+      children:
+        - 12266906383304328656
+        - 9131504479394737420
+        - 2403581094872301701
+        - 11706944037066844640
+  - Entity: 12266906383304328656
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-1.1832085, -0.054595947, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 5829957271562267458
+      children:
+        - 17250831726203270341
+        - 7329686862780978476
+  - Entity: 17250831726203270341
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 12266906383304328656
+      children:
+        - 3961433070694547834
+        - 17083999100570180314
+        - 16744253348131219349
+        - 18181833754772082945
+        - 14332718315055886667
+        - 12846515756734778485
+  - Entity: 3961433070694547834
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17250831726203270341
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17083999100570180314
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17250831726203270341
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16744253348131219349
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17250831726203270341
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18181833754772082945
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17250831726203270341
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14332718315055886667
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17250831726203270341
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12846515756734778485
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17250831726203270341
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7329686862780978476
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 12266906383304328656
+      children:
+        - 13696574924031117205
+        - 11685308596387788290
+        - 16316004889372457343
+        - 4069369961703303219
+        - 1892111172928267523
+        - 11040928725425541250
+  - Entity: 13696574924031117205
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7329686862780978476
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11685308596387788290
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7329686862780978476
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16316004889372457343
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7329686862780978476
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4069369961703303219
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7329686862780978476
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1892111172928267523
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7329686862780978476
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11040928725425541250
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7329686862780978476
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9131504479394737420
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.073425, -0.05620098, -14.845206]
+      rotation: [3.1415863, -1.5707954, 3.141584]
+      scale: [0.99998945, 0.99999994, 0.99998945]
+      parent: 5829957271562267458
+      children:
+        - 6814561849840707589
+        - 16657001634717837296
+  - Entity: 6814561849840707589
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 9131504479394737420
+      children:
+        - 9291107376384605902
+        - 9090706594592468115
+        - 17831131982406534944
+        - 13460416881582465541
+        - 15802623604366283042
+        - 14606374859684311436
+  - Entity: 9291107376384605902
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6814561849840707589
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9090706594592468115
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6814561849840707589
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17831131982406534944
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6814561849840707589
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13460416881582465541
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6814561849840707589
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15802623604366283042
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6814561849840707589
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14606374859684311436
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6814561849840707589
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16657001634717837296
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 9131504479394737420
+      children:
+        - 9122396074444540948
+        - 7769718519499424320
+        - 7834183643895152154
+        - 15638176642594571442
+        - 14764459781737321050
+        - 15169155804747285017
+  - Entity: 9122396074444540948
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16657001634717837296
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7769718519499424320
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579148, 0.5892838, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1.000097, 1, 1]
+      parent: 16657001634717837296
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7834183643895152154
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16657001634717837296
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15638176642594571442
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16657001634717837296
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14764459781737321050
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16657001634717837296
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15169155804747285017
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16657001634717837296
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2403581094872301701
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-7.9671736, -0.05993247, -0.075712204]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 5829957271562267458
+      children:
+        - 14877601569782098694
+        - 11548705433243039549
+  - Entity: 14877601569782098694
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2403581094872301701
+      children:
+        - 2000114115134423109
+        - 17187948279033026910
+        - 4348772175619032482
+        - 557952836203482183
+        - 8411750528041989562
+        - 15505417033903226172
+  - Entity: 2000114115134423109
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14877601569782098694
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17187948279033026910
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14877601569782098694
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4348772175619032482
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14877601569782098694
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 557952836203482183
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14877601569782098694
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8411750528041989562
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14877601569782098694
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15505417033903226172
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14877601569782098694
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11548705433243039549
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 2403581094872301701
+      children:
+        - 8616453878741747172
+        - 2062634022525249829
+        - 6887165864864400765
+        - 17795234783470404618
+        - 6702779414868996985
+        - 3453669164390521059
+  - Entity: 8616453878741747172
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11548705433243039549
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2062634022525249829
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11548705433243039549
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6887165864864400765
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11548705433243039549
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17795234783470404618
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11548705433243039549
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6702779414868996985
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11548705433243039549
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3453669164390521059
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11548705433243039549
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11706944037066844640
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.149916, -0.05639732, -10.126207]
+      rotation: [-3.1415908, -1.5707954, -3.1415908]
+      scale: [1, 0.99999994, 1]
+      parent: 5829957271562267458
+      children:
+        - 16612299969661309491
+        - 5071621295366540973
+  - Entity: 16612299969661309491
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11706944037066844640
+      children:
+        - 15950104993891808093
+        - 1655514176568525487
+        - 2027722199081879432
+        - 9853072522593902435
+  - Entity: 15950104993891808093
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16612299969661309491
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1655514176568525487
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16612299969661309491
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2027722199081879432
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16612299969661309491
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9853072522593902435
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16612299969661309491
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5071621295366540973
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 11706944037066844640
+      children:
+        - 362541384475294164
+        - 7147583370992685871
+        - 5306037790557879915
+        - 4516330968573449574
+  - Entity: 362541384475294164
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5071621295366540973
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7147583370992685871
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5071621295366540973
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5306037790557879915
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5071621295366540973
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4516330968573449574
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5071621295366540973
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13086958854495926243
+    Name: level
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 7368392336145021208
+      children:
+        - 15610586421814746319
+        - 6740016473513992101
+        - 17426615449494188982
+        - 6573313315731669536
+  - Entity: 15610586421814746319
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-1.1832085, -0.054595947, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 13086958854495926243
+      children:
+        - 17045768004142557247
+        - 13592698976168811702
+  - Entity: 17045768004142557247
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15610586421814746319
+      children:
+        - 15967250684393052417
+        - 5297245924224112351
+        - 18117565350994133270
+        - 16101096768877794025
+        - 10510921854905334732
+        - 5537840649088169547
+  - Entity: 15967250684393052417
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17045768004142557247
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5297245924224112351
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17045768004142557247
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18117565350994133270
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17045768004142557247
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16101096768877794025
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17045768004142557247
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10510921854905334732
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17045768004142557247
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5537840649088169547
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17045768004142557247
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13592698976168811702
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 15610586421814746319
+      children:
+        - 2258156173499629120
+        - 9833357235655104094
+        - 3432400451147454209
+        - 14487921690945980022
+        - 148902981372396336
+        - 9833751189424165855
+  - Entity: 2258156173499629120
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13592698976168811702
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9833357235655104094
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13592698976168811702
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3432400451147454209
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13592698976168811702
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14487921690945980022
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13592698976168811702
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 148902981372396336
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13592698976168811702
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9833751189424165855
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 13592698976168811702
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6740016473513992101
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.073425, -0.05620098, -14.845206]
+      rotation: [3.1415863, -1.5707954, 3.141584]
+      scale: [0.99998945, 0.99999994, 0.99998945]
+      parent: 13086958854495926243
+      children:
+        - 17900110861506566834
+        - 5604709513878086645
+  - Entity: 17900110861506566834
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6740016473513992101
+      children:
+        - 15853899268006849353
+        - 2032324399087949206
+        - 10953990858217128985
+        - 11174300952535397666
+        - 2070959409131640639
+        - 5634937575088703337
+  - Entity: 15853899268006849353
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17900110861506566834
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2032324399087949206
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17900110861506566834
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10953990858217128985
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17900110861506566834
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11174300952535397666
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17900110861506566834
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2070959409131640639
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17900110861506566834
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5634937575088703337
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17900110861506566834
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5604709513878086645
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6740016473513992101
+      children:
+        - 2441133519320787434
+        - 4555463965620522645
+        - 7643885050001807286
+        - 11253343770429534566
+        - 959876966892492263
+        - 229385711253051917
+  - Entity: 2441133519320787434
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5604709513878086645
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4555463965620522645
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579148, 0.5892838, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1.000097, 1, 1]
+      parent: 5604709513878086645
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7643885050001807286
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5604709513878086645
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11253343770429534566
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5604709513878086645
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 959876966892492263
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5604709513878086645
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 229385711253051917
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5604709513878086645
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17426615449494188982
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-7.9671736, -0.05993247, -0.075712204]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 13086958854495926243
+      children:
+        - 492641370077282350
+        - 17138121104271868906
+  - Entity: 492641370077282350
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17426615449494188982
+      children:
+        - 9457865715363844470
+        - 6061032410895758679
+        - 5629365218421512465
+        - 5162939171037038514
+        - 8829597344379818272
+        - 12827404363398120511
+  - Entity: 9457865715363844470
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 492641370077282350
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6061032410895758679
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 492641370077282350
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5629365218421512465
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 492641370077282350
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5162939171037038514
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 492641370077282350
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8829597344379818272
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 492641370077282350
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12827404363398120511
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 492641370077282350
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17138121104271868906
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17426615449494188982
+      children:
+        - 3134117419824980838
+        - 6988219460227106194
+        - 15343160445473251713
+        - 12657632007876227525
+        - 8115034438489076538
+        - 14849962037765381460
+  - Entity: 3134117419824980838
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17138121104271868906
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6988219460227106194
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17138121104271868906
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15343160445473251713
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17138121104271868906
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12657632007876227525
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17138121104271868906
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8115034438489076538
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17138121104271868906
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14849962037765381460
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17138121104271868906
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 6573313315731669536
+    Name: Bigger_Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-9.149916, -0.05639732, -10.126207]
+      rotation: [-3.1415908, -1.5707954, -3.1415908]
+      scale: [1, 0.99999994, 1]
+      parent: 13086958854495926243
+      children:
+        - 8000693384879382710
+        - 14465732128344011541
+  - Entity: 8000693384879382710
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6573313315731669536
+      children:
+        - 6487028156361052886
+        - 8530219708458226659
+        - 17515590667816914247
+        - 1916693675812730215
+  - Entity: 6487028156361052886
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8000693384879382710
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8530219708458226659
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8000693384879382710
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17515590667816914247
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8000693384879382710
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1916693675812730215
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 8000693384879382710
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14465732128344011541
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 1.0181277, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 6573313315731669536
+      children:
+        - 13744786994402006041
+        - 5521988603812555177
+        - 8481956711978896217
+        - 9943360352301643423
+  - Entity: 13744786994402006041
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14465732128344011541
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5521988603812555177
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14465732128344011541
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8481956711978896217
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14465732128344011541
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9943360352301643423
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14465732128344011541
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 13904854601044475477
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5916353497766337506
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-2.3724613, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.99994916]
+      parent: 7368392336145021208
+      children:
+        - 17901168544050565712
+        - 16743081006862630379
+  - Entity: 17901168544050565712
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 5916353497766337506
+      children:
+        - 1058293485354960720
+        - 11434875733991602918
+        - 7451507107917059474
+        - 18437162126218968810
+        - 2711775032450913784
+        - 15397210627291113293
+  - Entity: 1058293485354960720
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17901168544050565712
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11434875733991602918
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17901168544050565712
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7451507107917059474
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17901168544050565712
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18437162126218968810
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17901168544050565712
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2711775032450913784
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17901168544050565712
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15397210627291113293
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 17901168544050565712
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16743081006862630379
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 5916353497766337506
+      children:
+        - 14126251002291387785
+        - 17216773018439873507
+        - 18373520847112694696
+        - 7570164858368495090
+        - 3752414398577437842
+        - 18030340681597824937
+  - Entity: 14126251002291387785
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16743081006862630379
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 17216773018439873507
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16743081006862630379
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18373520847112694696
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16743081006862630379
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7570164858368495090
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16743081006862630379
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3752414398577437842
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16743081006862630379
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18030340681597824937
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16743081006862630379
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15421867810648696182
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [1.7305968, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.9999107]
+      parent: 7368392336145021208
+      children:
+        - 10455631456417367900
+        - 16789646325239748004
+  - Entity: 10455631456417367900
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15421867810648696182
+      children:
+        - 939126611933523440
+        - 16391124056531167609
+        - 7381639768585126266
+        - 2356151747706698970
+        - 15040701170998706062
+        - 7700256169655912817
+  - Entity: 939126611933523440
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10455631456417367900
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16391124056531167609
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10455631456417367900
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7381639768585126266
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10455631456417367900
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2356151747706698970
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10455631456417367900
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15040701170998706062
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10455631456417367900
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7700256169655912817
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 10455631456417367900
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16789646325239748004
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 15421867810648696182
+      children:
+        - 13001577001174570660
+        - 11505522145426803928
+        - 3846096523314645467
+        - 11056722368703267544
+        - 3882468094451574302
+        - 12561082403430058103
+  - Entity: 13001577001174570660
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16789646325239748004
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11505522145426803928
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16789646325239748004
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3846096523314645467
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16789646325239748004
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11056722368703267544
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16789646325239748004
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3882468094451574302
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16789646325239748004
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 12561082403430058103
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16789646325239748004
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14515090548652237114
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [-0.33268154, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.9999337]
+      parent: 7368392336145021208
+      children:
+        - 722632865223820075
+        - 16078684521994940729
+  - Entity: 722632865223820075
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 14515090548652237114
+      children:
+        - 17975688280548640665
+        - 9212125549426829453
+        - 14311943629464644413
+        - 5235480356244662000
+        - 10934011525285578826
+        - 9573769673432778036
+  - Entity: 17975688280548640665
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 722632865223820075
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9212125549426829453
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 722632865223820075
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14311943629464644413
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 722632865223820075
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5235480356244662000
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 722632865223820075
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 10934011525285578826
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 722632865223820075
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9573769673432778036
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 722632865223820075
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 16078684521994940729
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 14515090548652237114
+      children:
+        - 8663062215255150532
+        - 5374059268195802284
+        - 18084661199734662812
+        - 2916941786350004247
+        - 3871039147333102886
+        - 7798843417203184211
+  - Entity: 8663062215255150532
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16078684521994940729
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 5374059268195802284
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16078684521994940729
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 18084661199734662812
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16078684521994940729
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 2916941786350004247
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16078684521994940729
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 3871039147333102886
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16078684521994940729
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 7798843417203184211
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 16078684521994940729
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4478589805576152214
+    Name: Roof
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.757681, 0.60445464, 0]
+      rotation: [0, -0, 1.5707964]
+      scale: [1, 1, 0.9999167]
+      parent: 7368392336145021208
+      children:
+        - 1198480929703749676
+        - 15688615987121472892
+  - Entity: 1198480929703749676
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 4478589805576152214
+      children:
+        - 4614563759473641425
+        - 15411402478959620569
+        - 1780192620556411662
+        - 14007530140490337485
+        - 11130546667943671188
+        - 4003985047887945240
+  - Entity: 4614563759473641425
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1198480929703749676
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15411402478959620569
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1198480929703749676
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 1780192620556411662
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1198480929703749676
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 14007530140490337485
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1198480929703749676
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 11130546667943671188
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1198480929703749676
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4003985047887945240
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 1198480929703749676
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 15688615987121472892
+    Name: Wall
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [0.025924683, 1.0181277, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      parent: 4478589805576152214
+      children:
+        - 11241668218866649924
+        - 170632507336427649
+        - 8911729334741169903
+        - 13351309986164003542
+        - 9322419165656918838
+        - 4025978581631301990
+  - Entity: 11241668218866649924
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -9.889397]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15688615987121472892
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 170632507336427649
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -10.889204]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15688615987121472892
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 8911729334741169903
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -8.957671]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15688615987121472892
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 13351309986164003542
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.9982004]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15688615987121472892
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 9322419165656918838
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -7.0213485]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15688615987121472892
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
+  - Entity: 4025978581631301990
+    Name: Cube
+    Tag: ""
+    Canis::Transform:
+      active: true
+      position: [3.9579153, 0.58928394, -6.098811]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      parent: 15688615987121472892
+      children:
+        []
+    Canis::Material:
+      color: [1, 1, 1, 1]
+      MaterialAsset:
+        uuid: 7135089794620390826
+    Canis::Model:
+      color: [1, 1, 1, 1]
+      ModelAsset:
+        uuid: 17154083321347000101
