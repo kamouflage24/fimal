@@ -1,0 +1,10 @@
+color: [0.83397686, 0.5367434, 0.28013894, 1]
+backFaceCulling: false
+specularValue: 0.05
+shader:
+  uuid: 8880250170554161907
+  path: assets/shaders/fire.fs
+albedo:
+  uuid: 14224553623880955770
+  path: assets/textures/fire_textures/fire_1.png
+frontFaceCulling: false

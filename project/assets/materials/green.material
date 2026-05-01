@@ -1,0 +1,9 @@
+shader:
+  uuid: 8880250170554161907
+  path: assets/shaders/fire.fs
+color: [0.9852941, 0.9852941, 0.9852941, 1]
+backFaceCulling: true
+specularValue: 0.05
+albedo:
+  uuid: 7857415638058248177
+  path: assets/textures/block_game/grass.png
