@@ -17,7 +17,7 @@ void main()
     vec4 worldPos = M * vec4(vertexPosition, 1.0);
     mat3 normalMatrix = mat3(transpose(inverse(M)));
     fragmentNormal = normalize(normalMatrix * vertexNormal);
-    fragmentUV = vec2(vertexUV.x, vertexUV.y);
+    fragmentUV = vec2(vertexUV.x, 1.0 - vertexUV.y);
     fragmentWorldPos = worldPos.xyz;
 
     gl_Position = P * V * worldPos;

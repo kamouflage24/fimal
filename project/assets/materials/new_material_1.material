@@ -1,0 +1,9 @@
+shader:
+  uuid: 10431185204695442329
+  path: assets/shaders/fire_animation.fs
+color: [0.9852941, 0.9852941, 0.9852941, 1]
+backFaceCulling: false
+specularValue: 0.05
+albedo:
+  uuid: 14224553623880955770
+  path: assets/textures/fire_textures/fire_1.png

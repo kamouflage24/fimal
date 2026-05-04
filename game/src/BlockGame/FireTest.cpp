@@ -28,18 +28,26 @@ namespace BlockGame
 
     void FireTest::Ready() {
         
-        
-        i32 textureId = AssetManager::LoadTexture("assets/textures/fire_textures/fire_1.png");
-        i32 materialId = entity.GetComponent<Material>().materialId;
-        //MaterialAsset* material = AssetManager::GetMaterial(materialId);
-        //material->albedoId = textureId;
-        entity.GetComponent<Material>().materialFields.SetTexture("albedoFireMap", textureId);
+        fireFrameTextureIds[0] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_1.png");
+        fireFrameTextureIds[1] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_2.png");
+        fireFrameTextureIds[2] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_3.png");
+        fireFrameTextureIds[3] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_4.png");
+        entity.GetComponent<Material>().materialFields.SetTexture("albedoFireAnimMap", fireFrameTextureIds[currentFrame]);
     }
 
     void FireTest::Destroy() {}
 
     void FireTest::Update(float _dt) {
             elapsedTime += _dt;
+            frameTime += _dt;
+
+            if (frameTime >= FIRE_FRAME_DURATION)
+            {
+                frameTime = 0.0f;
+                currentFrame = (currentFrame + 1) % FIRE_FRAME_COUNT;
+                entity.GetComponent<Material>().materialFields.SetTexture("albedoFireAnimMap", fireFrameTextureIds[currentFrame]);
+            }
+
             entity.GetComponent<Material>().materialFields.SetFloat("time", elapsedTime);
     }
 }
