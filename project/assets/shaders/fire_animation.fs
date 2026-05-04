@@ -113,6 +113,7 @@ float ComputeDirectionalShadow(vec3 n, vec3 lightDir)
 
     return shadow / 9.0;
 }
+//establishing noise flickering
 float hash(float n)
 {
     return fract(sin(n) * 43758.5453123);
@@ -169,6 +170,7 @@ void main()
             float rangeFactor = clamp(1.0 - (distanceToLight / pointLightRanges[i]), 0.0, 1.0);
             attenuation = rangeFactor * rangeFactor;
         }
+        //noise flickering
         float flick = noise(time * 10.0 + float(i) * 17.0);
 
         float flickIntensity = mix(0.07, 1.3, flick);

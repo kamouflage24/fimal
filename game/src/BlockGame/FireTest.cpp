@@ -27,7 +27,7 @@ namespace BlockGame
     void FireTest::Create() {}
 
     void FireTest::Ready() {
-        
+        //animating the fire one texture at a time in the span of 4 frames
         fireFrameTextureIds[0] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_1.png");
         fireFrameTextureIds[1] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_2.png");
         fireFrameTextureIds[2] = AssetManager::LoadTexture("assets/textures/fire_textures/fire_3.png");
@@ -45,6 +45,7 @@ namespace BlockGame
             {
                 frameTime = 0.0f;
                 currentFrame = (currentFrame + 1) % FIRE_FRAME_COUNT;
+                //excluding the animation to the new shader File 'fire_animation' for evoiding texture failure 
                 entity.GetComponent<Material>().materialFields.SetTexture("albedoFireAnimMap", fireFrameTextureIds[currentFrame]);
             }
 

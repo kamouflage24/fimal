@@ -23,6 +23,7 @@ namespace BlockGame
         void Destroy() override;
         void Update(float _dt) override;
     private:
+    //animating the fires
         static constexpr int FIRE_FRAME_COUNT = 4;
         static constexpr float FIRE_FRAME_DURATION = 0.5f;
         float elapsedTime = 0.0f;
