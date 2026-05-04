@@ -10243,6 +10243,27 @@ Entities:
       parent: 8662646287686603221
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -10314,6 +10335,27 @@ Entities:
       parent: 15426268024487697468
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -10333,6 +10375,27 @@ Entities:
       parent: 15426268024487697468
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -10352,6 +10415,27 @@ Entities:
       parent: 15426268024487697468
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -10371,6 +10455,27 @@ Entities:
       parent: 15426268024487697468
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -10822,6 +10927,27 @@ Entities:
       parent: 8662646287686603221
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28221,6 +28347,27 @@ Entities:
       parent: 12170543124151300097
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28240,6 +28387,27 @@ Entities:
       parent: 12170543124151300097
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28259,6 +28427,27 @@ Entities:
       parent: 12170543124151300097
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28278,6 +28467,27 @@ Entities:
       parent: 12170543124151300097
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28336,6 +28546,27 @@ Entities:
       parent: 11903080879865224581
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28412,6 +28643,27 @@ Entities:
       parent: 11903080879865224581
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28942,6 +29194,27 @@ Entities:
       parent: 13896638188463384312
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28961,6 +29234,27 @@ Entities:
       parent: 13896638188463384312
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 2
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28980,6 +29274,27 @@ Entities:
       parent: 13896638188463384312
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -28999,6 +29314,27 @@ Entities:
       parent: 13896638188463384312
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -29057,6 +29393,27 @@ Entities:
       parent: 17788231877538521247
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
@@ -29133,6 +29490,27 @@ Entities:
       parent: 17788231877538521247
       children:
         []
+    Canis::Rigidbody:
+      active: true
+      motionType: 0
+      mass: 1
+      friction: 0.2
+      restitution: 0
+      linearDamping: 0.05
+      angularDamping: 0.05
+      useGravity: true
+      isSensor: false
+      layer: 1
+      mask: 4294967295
+      allowSleeping: true
+      lockRotationX: false
+      lockRotationY: false
+      lockRotationZ: false
+      linearVelocity: [0, 0, 0]
+      angularVelocity: [0, 0, 0]
+    Canis::BoxCollider:
+      active: true
+      size: [1, 1, 1]
     Canis::Material:
       color: [1, 1, 1, 1]
       MaterialAsset:
